@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Fábrica de Números Mágicos 🦄✨</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte divertida do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Biblioteca de Confete -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Tela Principal do Jogo -->
+  <main class="game-card">
+    
+    <!-- Cabeçalho -->
+    <header class="header">
+      <div class="mascot-left">🐻</div>
+      <h1>Fábrica de Números Mágicos!</h1>
+      <div class="mascot-right">🐰</div>
+    </header>
+
+    <!-- Contador de Estrelas/Placar -->
+    <section class="score-board">
+      <div class="stars-label">Suas Estrelinhas:</div>
+      <div id="star-count" class="stars-count">0 ⭐</div>
+    </section>
+
+    <!-- Caixinha Misteriosa Principal -->
+    <section class="mystery-box-container">
+      <div id="mystery-box" class="mystery-box">
+        <span id="box-text" class="box-text">?</span>
+      </div>
+      <p id="hint-text" class="hint-text">Aperte os botões coloridos para adivinhar o número!</p>
+    </section>
+
+    <!-- Teclado de Números (1 a 10) -->
+    <section class="keypad" id="keypad">
+      <!-- Os botões de 1 a 10 serão gerados aqui pelo JS -->
+    </section>
+
+    <!-- Botão de Reiniciar/Tentar De Novo -->
+    <div class="actions">
+      <button id="reset-btn" class="reset-btn">🔄 Jogar Novamente</button>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+/* Reset básico e tipografia */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', cursive, sans-serif;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 50%, #A1C4FD 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cartão do Jogo */
+.game-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 25px 30px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  text-align: center;
+  border: 6px solid #FFF;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  color: #FF5376;
+  text-shadow: 2px 2px 0px #FFDEE9;
+}
+
+.mascot-left, .mascot-right {
+  font-size: 2.2rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.mascot-right {
+  animation-delay: 1s;
+}
+
+/* Placar de Estrelas */
+.score-board {
+  background-color: #FFF9C4;
+  border: 3px dashed #FBC02D;
+  border-radius: 20px;
+  padding: 8px 15px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.stars-label {
+  font-size: 0.9rem;
+  color: #F57F17;
+  font-weight: 600;
+}
+
+.stars-count {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F57F17;
+}
+
+/* Caixa Misteriosa */
+.mystery-box-container {
+  margin-bottom: 20px;
+}
+
+.mystery-box {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, #FFD166, #FF9F1C);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 0 #E08600, 0 12px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.mystery-box.won {
+  background: linear-gradient(135deg, #06D6A0, #1B9AAA);
+  box-shadow: 0 8px 0 #04926C;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.box-text {
+  font-size: 3.2rem;
+  color: white;
+  font-weight: 700;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+}
+
+.hint-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+/* Teclado Numerado */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.num-btn {
+  background: #4EA8DE;
+  color: white;
+  border: none;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 18px;
+  box-shadow: 0 6px 0 #3A86C8;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.num-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #3A86C8;
+}
+
+.num-btn:disabled {
+  background: #D8D8D8;
+  box-shadow: 0 4px 0 #B0B0B0;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Cores variadas para os botões */
+.num-btn:nth-child(1) { background: #FF595E; box-shadow: 0 6px 0 #D13439; }
+.num-btn:nth-child(2) { background: #FF924C; box-shadow: 0 6px 0 #D46A27; }
+.num-btn:nth-child(3) { background: #FFCA3A; box-shadow: 0 6px 0 #CFA118; }
+.num-btn:nth-child(4) { background: #8AC926; box-shadow: 0 6px 0 #679B14; }
+.num-btn:nth-child(5) { background: #1982C4; box-shadow: 0 6px 0 #0D5A8A; }
+.num-btn:nth-child(6) { background: #6A4C93; box-shadow: 0 6px 0 #4B326B; }
+.num-btn:nth-child(7) { background: #FF62A5; box-shadow: 0 6px 0 #C93C78; }
+.num-btn:nth-child(8) { background: #00BBF9; box-shadow: 0 6px 0 #0087B5; }
+.num-btn:nth-child(9) { background: #00F5D4; box-shadow: 0 6px 0 #00B39B; }
+.num-btn:nth-child(10){ background: #F15BB5; box-shadow: 0 6px 0 #B83483; }
+
+/* Botão Reiniciar */
+.reset-btn {
+  background: #06D6A0;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 6px 0 #049A73;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: none;
+  margin: 0 auto;
+}
+
+.reset-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #049A73;
+}
+
+/* Animações */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Animação de Erro (Shake) */
+.shake {
+  animation: shakeAnim 0.4s ease-in-out;
+}
+
+@keyframes shakeAnim {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
